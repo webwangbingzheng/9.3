@@ -1,0 +1,1 @@
+var xml=new XMLHttpRequest;xml.onreadystatechange=function(){if(4===xml.readyState&&200===xml.status){var e=JSON.parse(xml.responseText);console.log(e)}},xml.open("get","/api/dataList",!0),xml.send();
