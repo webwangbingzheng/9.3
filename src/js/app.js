@@ -3,7 +3,14 @@ xml.onreadystatechange = function() {
     if (xml.readyState === 4) {
         if (xml.status === 200) {
             var data = JSON.parse(xml.responseText);
-            console.log(data)
+            data.match.forEach(function(file) {
+                console.log(file)
+                btn.onkeyup = function() {
+                    if (this.value.indexOf(file)) {
+                        console.log(this.value)
+                    }
+                }
+            })
         }
     }
 }
