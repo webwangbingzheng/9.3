@@ -6,9 +6,11 @@ xml.onreadystatechange = function() {
             data.match.forEach(function(file) {
                 console.log(file)
                 btn.onkeyup = function() {
+                    var str = '';
                     if (this.value.indexOf(file)) {
-                        console.log(this.value)
+                        str += '<p>' + file + '</p>';
                     }
+                    div1.innerHTML = str
                 }
             })
         }
